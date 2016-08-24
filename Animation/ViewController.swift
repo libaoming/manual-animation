@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
+    
+    var counter = 1
+    
+    @IBAction func next(_ sender: AnyObject) {
+      
+        
+        image.image = UIImage(named: "frame_\(counter)_delay-0.1s.gif")
+        counter += 1
+        
+        if counter == 11 {
+            counter = 0
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

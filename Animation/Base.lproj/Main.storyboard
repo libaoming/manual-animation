@@ -25,9 +25,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1V-ze-gHv">
                                 <frame key="frameInset" minX="164" minY="492" width="46" height="30"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Play"/>
                                 <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrq-NQ-jYr"/>
+                                    <action selector="timerManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOA-Y8-VQN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,6 +41,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btn" destination="F1V-ze-gHv" id="JYG-5K-L8b"/>
                         <outlet property="image" destination="HIA-V5-wfe" id="fQU-CJ-HZB"/>
                     </connections>
                 </viewController>

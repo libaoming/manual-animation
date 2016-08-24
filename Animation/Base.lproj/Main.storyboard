@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,12 +31,37 @@
                                     <action selector="timerManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOA-Y8-VQN"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="02w-jD-oc1">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-u4-6By">
+                                        <state key="normal" title="fade in"/>
+                                        <connections>
+                                            <action selector="fadeIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xMQ-uJ-N1b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5K-mW-boR">
+                                        <state key="normal" title="slide in"/>
+                                        <connections>
+                                            <action selector="slideIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xoX-fi-lHv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntz-F4-pb2">
+                                        <state key="normal" title="grow"/>
+                                        <connections>
+                                            <action selector="grow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPX-Sb-Ft2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="02w-jD-oc1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7ha-TQ-ypX"/>
+                            <constraint firstItem="02w-jD-oc1" firstAttribute="top" secondItem="F1V-ze-gHv" secondAttribute="bottom" constant="50" id="Kmk-cx-cra"/>
                             <constraint firstAttribute="trailing" secondItem="HIA-V5-wfe" secondAttribute="trailing" id="Ljl-3M-BEf"/>
                             <constraint firstItem="F1V-ze-gHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N5Z-R0-dyZ"/>
                             <constraint firstItem="HIA-V5-wfe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="RqB-cL-XFf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="02w-jD-oc1" secondAttribute="trailing" id="bGL-5b-EbU"/>
                             <constraint firstItem="F1V-ze-gHv" firstAttribute="top" secondItem="HIA-V5-wfe" secondAttribute="bottom" constant="25" id="ckl-0M-9dt"/>
                             <constraint firstItem="HIA-V5-wfe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dTH-tG-fAq"/>
                         </constraints>
